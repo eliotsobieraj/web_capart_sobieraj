@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+}
+
+.headercontain{
+    height: 400px;
+    background-color: #8f96be;
+    position: relative;
+}
+.menubar{
+    position:absolute;
+    left: 0;
+    width: 50vw;
+    margin-left: 30px;
+    display: flex;
+    height: 100px;
+    justify-content: start;
+}
+.header{
+    display: flex;
+    height:100px ;
+    justify-content: right;
+    align-items: center;
+}
+.menubtn{
+    border: none;
+    background-color: #a6baea;
+    margin-top: 30px;
+    height: 40px;
+    width: 130px;
+    border-radius: 16px;
+    margin-left:30px;
+}
+.searchbar{
+    background-color: transparent;
+    margin-right: 5vw;
+    border: none;
+    color: white;
+    border-bottom: 1px solid white;
+}
+.searchbar:focus{
+    outline: none;
+}
+
+.searchbar:focus::-webkit-search-cancel-button{
+    display: none;
+}
+.searchbtn{
+    background-color: transparent;
+    border:none;
+    color: white;
+}
+.searchbar::placeholder{
+    color: white;
+}
+
+#triangle{
+    z-index: 2;
+    position: absolute;
+    top: 300px;
+    right :0;
+    transform:rotate(-120deg);
+    width: 0;
+    height: 0;
+    border-right: #a6baea 250px solid;
+    border-top: 190px solid transparent;
+    border-bottom: 170px solid transparent;
+}
+
+.madamephoto{
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+}
