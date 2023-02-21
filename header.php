@@ -27,6 +27,10 @@
     <img class="madamephoto" src="image/madamephoto.png" alt="">
 </div>
 </div>
+<form action="" method="post">
+<button class="startuploading">Start uploading</button>
+</form>
+<h1 class="maintitle">Weload</h1>
 <div id="triangle"></div>
 <div style="height: 1000px"></div>
 </body>
