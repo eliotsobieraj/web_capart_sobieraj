@@ -25,12 +25,14 @@ include "header.php";
         <button type="submit" id="ajouter">Ajouter</button>
     </form>
     <?php
+
     try {
         $bdd = new PDO("mysql:host=localhost;dbname=wepost;charset=utf8", 'root' , 'root');
     }catch (Exception $e){
         echo "Erreur :" . $e->getMessage();
     }
-    if(!empty($_POST['titre_article']) && !empty($_FILES['article_image'] && !empty($_FILES['pseudo_article']))){
+
+    if(!empty($_POST['titre_article']) && !empty($_FILES['article_image'] && !empty($_POST['pseudo_article']))){
         $titre_article = $_POST['titre_article'];
         $pseudo_article = $_POST['pseudo_article'];
         $tpm_image_article= $_FILES['article_image']['tmp_name'];
