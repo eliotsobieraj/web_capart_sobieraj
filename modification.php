@@ -10,50 +10,48 @@
     <title>Modification</title>
 </head>
 <body>
-<?php
-    include "header.php";
-    try {
-        $bdd = new PDO("mysql:host=localhost;dbname=wepost;charset=utf8", 'root' , 'root');
-    }catch (Exception $e){
-        echo "Erreur :" . $e->getMessage();
-    }
-    $id = $bdd->prepare('SELECT * FROM photos WHERE id = ?');
-    $id->execute(array($_GET['id']));
-    $article = $id->fetch(\PDO::FETCH_ASSOC);
-?>
-<div id="box">
-    <form method="post" action="" enctype="multipart/form-data" class="form">
-        <div>
-            <h3>Article</h3>
-            <button type="submit" class="retour"><a href="index.php">Retour</a></button>
-        </div>
-        <label for="titre">Enter titre</label><br><input type="text" name="titre_article" id="titre"><br>
-        <label for="pseudo">Enter pseudo</label><br><input type="text" name="pseudo_article" id="pseudo"><br>
-        <label id="picture">Choose a picture for article:</label><br>
-        <input type="file" id="image" name="article_image" accept="image/png, image/jpeg"><br>
-        <button type="submit" id="ajouter">Modifier</button>
-    </form>
     <?php
-    if(!empty($_POST['titre_article']) && !empty($_FILES['article_image']) && !empty($_POST['pseudo_article'])){
-        $titre_article = $_POST['titre_article'];
-        $pseudo_article = $_POST['pseudo_article'];
-        $tpm_image_article= $_FILES['article_image']['tmp_name'];
-        $ext = pathinfo($_FILES['article_image']['name'])['extension'];
-        $ext_verif = ['jpg', 'jpeg', 'png'];
-        if(!empty($_FILES['article_image'])){
-            if($_FILES['article_image']['error'] == 0 && in_array($ext, $ext_verif)){
-                move_uploaded_file(htmlspecialchars($tpm_image_article), "image/" . date("d-m-y") .$_FILES["article_image"]["name"]);
-            }
+        include "header.php";
+        try {
+            $bd = new PDO("mysql:host=localhost;dbname=wepost;charset=utf8", 'root' , 'root');
+        }catch (Exception $e){
+            echo "Erreur :" . $e->getMessage();
         }
 
-        $rss = $bdd->prepare('UPDATE photos SET pseudo=?, title=?, location=?, file_name=?, created_at=NOW() WHERE id = ?');
-        $rss->execute(array($pseudo_article, $titre_article, "image/". date("d-m-y") . $_FILES["article_image"]["name"], $_FILES["article_image"]["name"], $id));
-        echo "<p>Votre article a été modifié</p>";
-    }else{
-        echo "<p>Votre article n'a pas été modifié</p>";
-    }
+        $id = $bd->prepare('SELECT * FROM photos WHERE id = ?');
+        $id->execute(array($_GET['id']));
+        $article = $id->fetch(PDO::FETCH_ASSOC);
+        $id_article = $id->fetchColumn();
     ?>
-</div>
+    <div id="box">
+        <form method="post" action="" enctype="multipart/form-data" class="form">
+            <div>
+                <h3>Article</h3>
+                <button type="submit" class="retour"><a href="index.php">Retour</a></button>
+            </div>
+            <label for="titre">Enter titre</label><br><input type="text" name="titre_article" id="titre" value="<?php echo htmlspecialchars($article['title'])?>"><br>
+            <label for="pseudo">Enter pseudo</label><br><input type="text" name="pseudo_article" id="pseudo" value="<?php echo htmlspecialchars($article['pseudo'])?>"><br>
+            <label id="picture">Choose a picture:</label><br>
+            <input type="file" id="image" name="article_image" accept="image/png, image/jpeg"><br>
+            <button type="submit" id="ajouter">Modifier</button>
+        </form>
+        <?php
+            if(!empty($_POST['titre_article']) && !empty($_FILES['article_image']) && !empty($_POST['pseudo_article'])){
+                $titre_article = $_POST['titre_article'];
+                $pseudo_article = $_POST['pseudo_article'];
+
+                if($_FILES['article_image']['error'] == 0 && in_array(pathinfo($_FILES['article_image']['name'])['extension'], ['jpg', 'jpeg', 'png'])){
+                    move_uploaded_file(htmlspecialchars($_FILES['article_image']['tmp_name']), "image/" . date("d-m-y") .$_FILES["article_image"]["name"]);
+                }
+
+                $rss = $bd->prepare('UPDATE photos SET pseudo=?, title=?, location=?, file_name=?, created_at=NOW() WHERE id = ?');
+                $rss->execute(array($pseudo_article, $titre_article, "image/". date("d-m-y") . $_FILES["article_image"]["name"], $_FILES["article_image"]["name"], $id_article));
+                echo "<p>Votre article a été modifié</p>";
+            }else{
+                echo "<p>Votre article n'a pas été modifié</p>";
+            }
+        ?>
+    </div>
 </body>
 </html>
 

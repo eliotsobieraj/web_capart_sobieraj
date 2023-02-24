@@ -33,6 +33,7 @@ body{
     border-radius: 16px;
     margin-left:30px;
 }
+
 .searchbar{
     background-color: transparent;
     margin-right: 5vw;
@@ -40,6 +41,7 @@ body{
     color: white;
     border-bottom: 1px solid white;
 }
+
 .searchbar:focus{
     outline: none;
 }
@@ -47,11 +49,13 @@ body{
 .searchbar:focus::-webkit-search-cancel-button{
     display: none;
 }
+
 .searchbtn{
     background-color: transparent;
     border:none;
     color: white;
 }
+
 .searchbar::placeholder{
     color: white;
 }

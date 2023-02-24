@@ -21,7 +21,7 @@ include "header.php";
         </div>
         <label for="titre">Enter titre</label><br><input type="text" name="titre_article" id="titre"><br>
         <label for="pseudo">Enter pseudo</label><br><input type="text" name="pseudo_article" id="pseudo"><br>
-        <label id="picture">Choose a picture for article:</label><br>
+        <label id="picture">Choose a picture:</label><br>
         <input type="file" id="image" name="article_image" accept="image/png, image/jpeg"><br>
         <button type="submit" id="ajouter">Ajouter</button>
     </form>
