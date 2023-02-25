@@ -1,0 +1,100 @@
+body{
+    font-family: "OCR A Extended", monospace;
+    font-size: 20px;
+}
+
+#box{
+    color: white;
+    background-color: #8f96be;
+    border: 1px solid #8f96be;
+    border-radius: 8px;
+    text-align: center;
+    padding: 2% 0 2% 0;
+    margin: 200px 10% 10%;
+}
+
+#titre{
+    margin-bottom: 2%;
+}
+
+label{
+    text-align: center;
+    margin-top: 10%;
+}
+
+#space{
+    margin: 0 10% 0 10%;
+}
+
+form>div{
+    display: flex;
+    align-content: space-around;
+    margin-left: 46.7%;
+}
+
+.form{
+    width: 100%;
+    position: relative;
+
+}
+
+textarea{
+    width: 1000px;
+    height: 200px;
+    resize: none;
+}
+
+.retour{
+    position: absolute;
+    font-family: "OCR A Extended", monospace;
+    font-size: 20px;
+    height: 40px;
+    top: 0;
+    right: 10px;
+    border:none;
+    border-radius: 13px;
+    margin-top: 2%;
+    margin-left: 58%;
+    margin-right: 0.5vw;
+    transition-duration: 0.05s;
+    background-color:#a6baea ;
+}
+
+.retour a{
+    text-decoration: none;
+    color: white;
+}
+
+#ajouter{
+    font-family: "OCR A Extended", monospace;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 13px;
+    margin-top: 2%;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    transition-duration: 0.05s;
+    background-color: #a6baea;
+    color: white;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#pseudo{
+    margin-bottom: 2%;
+}
+.form input[type="text"]{
+    background-color: #8f96be;
+    border: none;
+    border-bottom: white 1px solid;
+}
+.form button{
+    color: white;
+}
+.form input[type="file"] button{
+    color: white;
+}
