@@ -21,7 +21,7 @@
         $id = $bd->prepare('SELECT * FROM photos WHERE id = ?');
         $id->execute(array($_GET['id']));
         $article = $id->fetch(PDO::FETCH_ASSOC);
-        $id_article = $id->fetchColumn();
+        $id_article = $_GET['id']
     ?>
     <div id="box">
         <form method="post" action="" enctype="multipart/form-data" class="form">
