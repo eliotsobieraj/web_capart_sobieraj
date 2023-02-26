@@ -22,7 +22,6 @@ ini_set('display_errors', 1);?>
         <div class="menubar">
             <button class="menubtn"><a href="index.php">Accueil</a></button>
             <button class="menubtn"><a href="upload.php">Upload</a></button>
-            <button class="menubtn">Contact</button>
         </div>
 
         <img class="madamephoto" src="image/madamephoto.png" alt="">
