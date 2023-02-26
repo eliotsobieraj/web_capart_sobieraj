@@ -6,20 +6,42 @@ body{
 
 #image{
     border-radius: 8px;
-    height:40vh;
-    width:25vw;
-    margin-left: 20%;
+    width: 45vw;
+    height:300px;
 }
 
-#box{
-    color: whitesmoke;
-    background-color: #8f96be;
-    border: 1px solid #8f96be;
-    border-radius: 8px;
-    margin-top: 5%;
-    margin-left: 30%;
-    margin-right: 30%;
+#ligne{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
+
+.boxcontainer{
+    width: 90vw;
+    margin-top: 200px;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+.box{
+    position:relative ;
+    border-radius: 10px;
+    align-self: center;
+    margin-bottom: 50px;
+    width: 45vw;
+    height: 500px;
+    justify-content: center;
+    background-color: #8f96be;
+}
+.box p{
+    color: white;
+}
+
 
 #top_box{
     display: flex;
@@ -30,11 +52,12 @@ body{
 
 #bottom_box{
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     flex-direction: row;
 }
 
-.button{
+
+.buttondetail{
     font-family: "OCR A Extended", monospace;
     font-size: 20px;
     height: 40px;
@@ -47,7 +70,7 @@ body{
     background-color: white;
 }
 
-.button:active{
+.buttondetail:active{
     scale: 2;
 }
 
@@ -60,7 +83,68 @@ a{
     color: white;
 }
 
-.button>a{
+.buttondetail>a{
     text-decoration: none;
     color: #8f96be;
+}
+
+@media (max-width: 750px){
+    .boxcontainer{
+        grid-template-columns: 1fr;
+        margin-left: 0;
+    }
+    #image{
+        width: 90vw;
+        height: 400px;
+    }
+    .box{
+        width: 90vw;
+        margin: 0;
+        margin-left: 5vw;
+        margin-bottom: 150px;
+        height: 600px;
+    }
+}
+.buttondetail{
+    position: absolute;
+    right: 10px;
+}
+.box h3{
+    color: white;
+    margin-left:10px ;
+}
+
+.searchcont{
+    position: absolute;
+    right: 0;
+    top: 35px;
+    z-index: 5;
+}
+.searchbar{
+    background-color: transparent;
+    margin-right: 5vw;
+    border: none;
+    border-bottom: 1px solid white;
+
+}
+
+.searchbar:focus{
+    outline: none;
+}
+
+.searchbar:focus::-webkit-search-cancel-button{
+    display: none;
+}
+
+.searchbtn{
+    background-color: transparent;
+    border:none;
+    color: white;
+}
+
+.searchbar::placeholder{
+    color: white;
+}
+.footer{
+    color: lightgrey;
 }

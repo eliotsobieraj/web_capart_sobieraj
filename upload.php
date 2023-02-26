@@ -48,7 +48,6 @@ include "header.php";
                 move_uploaded_file(htmlspecialchars($tpm_image_article), "image/" . date("d-m-y") .$_FILES["article_image"]["name"]);
             }
         }
-
         $rss = $bdd->prepare('INSERT INTO photos (pseudo, title, location, file_name, created_at) VALUES (?, ?, ?, ?, NOW())');
         $rss->execute(array( $pseudo_article, $titre_article, "image/". date("d-m-y") . $_FILES["article_image"]["name"], $_FILES["article_image"]["name"]));
         echo "<p>Votre photo a été posté</p>";
@@ -57,5 +56,6 @@ include "header.php";
     }
     ?>
 </div>
+<?php include 'footer.php'; ?>
 </body>
 </html>

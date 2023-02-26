@@ -35,5 +35,6 @@
         echo '</div>';
         echo '</div>';
     ?>
+    <?php include "footer.php"?>
 </body>
 </html>

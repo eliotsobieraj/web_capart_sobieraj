@@ -41,11 +41,13 @@ if (!empty($_GET['search_bar']) && $_GET['submit'] == 1){
                 echo '<p>' .htmlspecialchars($article['pseudo']). '</p>';
                 echo '</div>';
             echo '</div>';
-        } ?>
+        }
+        include 'footer.php';?>
 </body>
 </html>
 
 <?php }
 else{
     echo ("Veuillez rentrer rentrer quelque chose dans la barre de cherche");
+    include 'footer.php';
 }?>

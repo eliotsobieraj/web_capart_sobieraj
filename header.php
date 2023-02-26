@@ -1,4 +1,5 @@
-<?php ?>
+<?php
+ini_set('display_errors', 1);?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,11 +12,14 @@
 </head>
 <body>
 <div class="headercontain">
+    <div class="respmenucont">
+        <button class="menubtnresp"><a href="index.php">Accueil</a></button>
+        <button class="menubtnresp"><a href="upload.php">Upload</a></button>
+    </div>
     <div class="header">
         <div class="menubar">
             <button class="menubtn"><a href="index.php">Accueil</a></button>
             <button class="menubtn"><a href="upload.php">Upload</a></button>
-            <button class="menubtn">Contact</button>
         </div>
         <form action="result_search.php" method="get" >
             <button class="searchbtn" type="submit" name="submit" value=1><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search " viewBox="0 0 16 16">

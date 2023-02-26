@@ -22,6 +22,9 @@ try {
 ?>
 <h1>Suppression réalisé avec succès</h1>
 <a href="index.php"><button class="button">Retour</button></a>
+<?php
+include 'footer.php';
+?>
 </body>
 </html>
 
