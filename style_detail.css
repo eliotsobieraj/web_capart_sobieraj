@@ -30,6 +30,7 @@ p, h3{
     background-color: #8f96be;
     border: 1px solid #8f96be;
     border-radius: 8px;
+    padding: 2% 0 2% 0;
     margin: 2% 30% 2% 30%;
 }
 
@@ -78,4 +79,25 @@ a{
 }
 .button:active{
     scale: 2;
+}
+
+@media (max-width: 1200px){
+    #image{
+        width: 50vw!important;
+    }
+    #box{
+        margin: 10vw 5vh 0 5vh;
+    }
+}
+
+@media (max-width: 900px){
+    #box{
+        margin-top: 20%;
+    }
+}
+
+@media (max-width: 600px){
+    #box{
+        margin-top: 30%;
+    }
 }

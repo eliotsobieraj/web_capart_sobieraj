@@ -35,11 +35,6 @@ form>div{
 button:active{
     scale: 2;
 }
-textarea{
-    width: 1000px;
-    height: 200px;
-    resize: none;
-}
 
 .retour{
     font-family: "OCR A Extended", monospace;
