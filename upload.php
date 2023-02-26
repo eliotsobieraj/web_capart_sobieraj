@@ -19,13 +19,11 @@ include "header.php";
             <h3>Article</h3>
             <button type="submit" class="retour"><a href="index.php">Retour</a></button>
         </div>
-
         <label for="titre">Enter titre</label><br><input type="text" name="titre_article" id="titre"><br>
         <label for="pseudo">Enter pseudo</label><br><input type="text" name="pseudo_article" id="pseudo"><br>
         <label id="picture">Choose a picture:</label><br>
         <input type="file" id="image" name="article_image" accept="image/png, image/jpeg"><br>
         <button type="submit" id="ajouter">Ajouter</button>
-
     </form>
     <?php
 

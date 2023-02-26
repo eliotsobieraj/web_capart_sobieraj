@@ -9,6 +9,7 @@ $id->execute();
 ?>
 
 <!doctype html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,24 +21,45 @@ $id->execute();
     <title>Page d'accueil</title>
 </head>
 <body>
+<form action="" class="searchcont" method="post" >
+    <button name="searchbtn" class="searchbtn" value="click" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search " viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg></button>
+    <input type="search" class="searchbar" placeholder="search">
+</form>
     <?php
         include 'header.php';
+    ?>
+    <div class="boxcontainer">
+
+    <?php
+    if (isset($_POST['searchbtn'])){
+        echo"bon";
+    }
 
     while ($article = $id->fetch(PDO::FETCH_ASSOC)){
     $identifiant = htmlspecialchars($article['id']);
-    echo '<div id="box">';
-        echo '<div id="top_box">';
-            echo'<button class="button"><a href="detail_article.php?id='.htmlspecialchars($identifiant).'">Détail</a></button>';
+    echo '<div class="box">';
+        #echo '<div id="top_box">';
+            echo'<button class="buttondetail"><a href="detail_article.php?id='.htmlspecialchars($identifiant).'">Détail</a></button>';
             echo '<h3>' . htmlspecialchars($article['title']) . '</h3>';
-            echo '</div>';
+            #echo '</div>';
         echo '<img id="image" src="'. htmlspecialchars($article['location']).'">';
-        echo '<div id="bottom_box">';
-            echo '<p>' .htmlspecialchars($article['file_name']). '</p>';
+        #echo '<div id="bottom_box">';
+            #echo '<p>' .htmlspecialchars($article['file_name']). '</p>';
             echo '<p>' .htmlspecialchars($article['created_at']). '</p>';
             echo '<p>' .htmlspecialchars($article['pseudo']). '</p>';
             echo '</div>';
-            echo '</div>';
+
     }
     ?>
+        <div class="searchcont">
+
+
+        </div>
+
+    </div>
+
+
 </body>
 </html>

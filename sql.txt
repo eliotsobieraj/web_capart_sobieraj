@@ -4,7 +4,7 @@ CREATE TABLE `photos` (
   `title` int(11) NOT NULL,
   `location` varchar(255) NOT NULL,
   `file_name` text NOT NULL,
-  `created at` datetime NOT NULL,
+  `created_at` datetime NOT NULL,
   `article_like` int(11) NOT NULL,
   `article_dislike` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
