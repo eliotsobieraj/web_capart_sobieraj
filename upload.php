@@ -23,6 +23,10 @@ include "header.php";
         <label for="pseudo">Enter pseudo</label><br><input type="text" name="pseudo_article" id="pseudo"><br>
         <label id="picture">Choose a picture:</label><br>
         <input type="file" id="image" name="article_image" accept="image/png, image/jpeg"><br>
+        <div id="check">
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label for="checkbox">I accept to give right of my photo (required)</label>
+        </div>
         <button type="submit" id="ajouter">Ajouter</button>
     </form>
     <?php

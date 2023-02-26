@@ -84,3 +84,9 @@ a{
 #pseudo{
     margin-bottom: 2%;
 }
+
+#check{
+    display: block;
+    margin-top: 2%;
+    margin-left: 0;
+}
