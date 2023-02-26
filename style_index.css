@@ -7,7 +7,7 @@ body{
 #image{
     border-radius: 8px;
     width: 45vw;
-    height: auto;
+    height:300px;
 
 
 }
@@ -22,10 +22,11 @@ body{
 .boxcontainer{
     width: 90vw;
     margin-top: 200px;
-    margin-left: 4.5vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
     display: grid;
-    justify-content: space-between;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
 
@@ -33,7 +34,7 @@ body{
     position:relative ;
     border-radius: 10px;
     align-self: center;
-    margin: 1vw;
+    margin-bottom: 50px;
     width: 45vw;
     height: 500px;
     justify-content: center;
@@ -113,12 +114,14 @@ a{
     }
     #image{
         width: 90vw;
+        height: 400px;
     }
     .box{
         width: 90vw;
         margin: 0;
         margin-left: 5vw;
-        margin-bottom: 10vh;
+        margin-bottom: 150px;
+        height: 600px;
     }
 }
 .buttondetail{
@@ -160,4 +163,7 @@ a{
 
 .searchbar::placeholder{
     color: white;
+}
+.footer{
+    color: lightgrey;
 }

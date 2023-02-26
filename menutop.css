@@ -80,6 +80,7 @@ body{
     position: absolute;
     z-index: 1;
     bottom: 0;
+    right: 0;
 }
 
 #accueil{
@@ -122,6 +123,7 @@ a{
     }
     .madamephoto{
         height: 250px;
+        right: -50px;
     }
     .menubtn{
         display: none;
@@ -135,7 +137,7 @@ a{
     }
     #triangle{
         top: 300px;
-        right :0;
+        right :-40px;
         transform:rotate(-120deg);
         width: 0;
         height: 0;
