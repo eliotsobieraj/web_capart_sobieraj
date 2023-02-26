@@ -20,7 +20,7 @@ try {
     $rss = $bdd->prepare('DELETE FROM photos WHERE id = ?');
     $rss->execute(array($_GET['id']));
 ?>
-<h1>Suppression réaliser avec succès</h1>
+<h1>Suppression réalisé avec succès</h1>
 <a href="index.php"><button class="button">Retour</button></a>
 </body>
 </html>

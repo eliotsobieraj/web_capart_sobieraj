@@ -26,7 +26,7 @@
     <div id="box">
         <form method="post" action="" enctype="multipart/form-data" class="form">
             <div>
-                <h3>Article</h3>
+                <h3>Photo</h3>
                 <button type="submit" class="retour"><a href="index.php">Retour</a></button>
             </div>
             <label for="titre">Enter titre</label><br><input type="text" name="titre_article" id="titre" value="<?php echo htmlspecialchars($article['title'])?>"><br>
