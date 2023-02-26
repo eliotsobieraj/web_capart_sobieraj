@@ -136,7 +136,7 @@ a{
 .searchcont{
     position: absolute;
     right: 0;
-    top: 35px;
+    top: 65px;
     z-index: 5;
 }
 .searchbar{
@@ -163,7 +163,4 @@ a{
 
 .searchbar::placeholder{
     color: white;
-}
-.footer{
-    color: lightgrey;
 }

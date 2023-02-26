@@ -17,7 +17,7 @@ ini_set('display_errors', 1);?>
     <div class="respmenucont">
         <button class="menubtnresp"><a href="index.php">Accueil</a></button>
         <button class="menubtnresp"><a href="upload.php">Upload</a></button>
-        <button class="menubtnresp">Contact</button></div>
+        </div>
     <div class="header">
         <div class="menubar">
             <button class="menubtn"><a href="index.php">Accueil</a></button>
