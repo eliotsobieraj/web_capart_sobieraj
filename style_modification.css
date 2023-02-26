@@ -18,10 +18,6 @@ label{
     margin-top: 10%;
 }
 
-#space{
-    margin: 0 10% 0 10%;
-}
-
 form>div{
     display: flex;
     align-content: space-around;

@@ -11,13 +11,6 @@ body{
     margin-left: 20%;
 }
 
-#ligne{
-    margin-left: 10%;
-    margin-right: 10%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
 #box{
     color: whitesmoke;
     background-color: #8f96be;
@@ -39,24 +32,6 @@ body{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-}
-
-#pouce_box{
-    display: flex;
-    flex-direction: row;
-}
-
-.pouce {
-    margin: 18px 6px 5px 29px;
-    height: 30px;
-    width: 30px;
-}
-
-#like, #dislike{
-    margin-top: 6%;
-    height: 40px;
-    margin-left: 17px;
-    margin-right: 5px;
 }
 
 .button{
