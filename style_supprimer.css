@@ -1,0 +1,29 @@
+body{
+    font-family: "OCR A Extended", monospace;
+    font-size: 20px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.button{
+    font-family: "OCR A Extended", monospace;
+    font-size: 20px;
+    border: rgba(255, 255, 255, 0.24) 1px solid;
+    border-radius: 13px;
+    margin-top: 2%;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    transition-duration: 0.05s;
+    background-color: #8f96be;
+    color: white;
+    width: 242px;
+    height: 100px;
+}
+
+.button:active{
+    scale: 2;
+}
+
+a{
+    text-decoration: none;
+}

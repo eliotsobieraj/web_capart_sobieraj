@@ -1,0 +1,84 @@
+.retour{
+    font-family: "OCR A Extended", monospace;
+    font-size: 20px;
+    height: 40px;
+    border: rgba(255, 255, 255, 0.24) 1px solid;
+    border-radius: 13px;
+    margin-top: 8%;
+    margin-left: 90%;
+    margin-right: 0.5vw;
+    transition-duration: 0.05s;
+    background-color: black;
+}
+
+.retour a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    font-family: "OCR A Extended", monospace;
+    font-size: 20px;
+    background-color: whitesmoke;
+}
+
+#image{
+    border-radius: 8px;
+    height:40vh;
+    width:25vw;
+    margin-left: 20%;
+}
+
+#box{
+    color: whitesmoke;
+    background-color: #8f96be;
+    border: 1px solid #8f96be;
+    border-radius: 8px;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#top_box{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    margin-bottom: 3%;
+}
+
+#bottom_box{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.button{
+    font-family: "OCR A Extended", monospace;
+    font-size: 20px;
+    height: 40px;
+    border: rgba(255, 255, 255, 0.24) 1px solid;
+    border-radius: 13px;
+    margin-top: 2%;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    transition-duration: 0.05s;
+    background-color: white;
+}
+
+.button:active{
+    scale: 2;
+}
+
+#ajouter{
+    margin-left: 10%!important;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.button>a{
+    text-decoration: none;
+    color: #8f96be;
+}

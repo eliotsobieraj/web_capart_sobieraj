@@ -1,0 +1,73 @@
+body{
+    font-family: "OCR A Extended", monospace;
+    font-size: 20px;
+}
+
+#box{
+    color: #8f96be;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 8px;
+    text-align: center;
+    padding: 2% 0 2% 0;
+    margin: 2% 15% 0 15%;
+}
+
+label{
+    text-align: center;
+    margin-top: 10%;
+}
+
+form>div{
+    display: flex;
+    align-content: space-around;
+    margin-left: 46.7%;
+}
+
+.form{
+    width: 100%;
+}
+
+button:active{
+    scale: 2;
+}
+
+.retour{
+    font-family: "OCR A Extended", monospace;
+    font-size: 20px;
+    height: 40px;
+    border: #8f96be 1px solid;
+    border-radius: 13px;
+    margin-top: 2%;
+    margin-left: 58%;
+    margin-right: 0.5vw;
+    transition-duration: 0.05s;
+    background-color: #8f96be;
+}
+
+.retour a{
+    text-decoration: none;
+    color: white;
+}
+
+#ajouter{
+    font-family: "OCR A Extended", monospace;
+    font-size: 20px;
+    height: 40px;
+    border: black 1px solid;
+    border-radius: 13px;
+    margin-top: 2%;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    transition-duration: 0.05s;
+    background-color: white;
+    color: #8f96be;
+}
+
+#titre{
+    margin-bottom: 2%;
+}
+
+#pseudo{
+    margin-bottom: 2%;
+}
