@@ -16,7 +16,7 @@ include "header.php";
 <div id="box">
     <form method="post" action="" enctype="multipart/form-data" class="form">
         <div>
-            <h3>Article</h3>
+            <h3>Photo</h3>
             <button type="submit" class="retour"><a href="index.php">Retour</a></button>
         </div>
         <label for="titre">Enter titre</label><br><input type="text" name="titre_article" id="titre"><br>
@@ -51,9 +51,9 @@ include "header.php";
 
         $rss = $bdd->prepare('INSERT INTO photos (pseudo, title, location, file_name, created_at) VALUES (?, ?, ?, ?, NOW())');
         $rss->execute(array( $pseudo_article, $titre_article, "image/". date("d-m-y") . $_FILES["article_image"]["name"], $_FILES["article_image"]["name"]));
-        echo "<p>Votre article a été posté</p>";
+        echo "<p>Votre photo a été posté</p>";
     }else{
-        echo "<p>Votre article n'a pas été posté</p>";
+        echo "<p>Votre photo n'a pas été posté</p>";
     }
     ?>
 </div>
