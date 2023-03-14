@@ -1,0 +1,113 @@
+body{
+    font-family: "OCR A Extended", monospace;
+    font-size: 20px;
+    background-color: whitesmoke;
+}
+
+#image{
+    border-radius: 8px;
+    width: 45vw;
+    height:300px;
+}
+
+
+.boxcontainer{
+    width: 90vw;
+    margin-top: 200px;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+.box{
+    position:relative ;
+    border-radius: 10px;
+    align-self: center;
+    margin-bottom: 50px;
+    width: 45vw;
+    height: 500px;
+    justify-content: center;
+    background-color: #8f96be;
+}
+.box p{
+    color: white;
+}
+
+
+#top_box{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    margin-bottom: 3%;
+}
+
+#bottom_box{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+}
+
+
+.buttondetail{
+    font-family: "OCR A Extended", monospace;
+    font-size: 20px;
+    height: 40px;
+    border: rgba(255, 255, 255, 0.24) 1px solid;
+    border-radius: 13px;
+    margin-top: 2%;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    transition-duration: 0.05s;
+    background-color: white;
+}
+
+.buttondetail:active{
+    scale: 2;
+}
+
+#ajouter{
+    margin-left: 10%!important;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.buttondetail>a{
+    text-decoration: none;
+    color: #8f96be;
+}
+
+@media (max-width: 750px){
+    .boxcontainer{
+        grid-template-columns: 1fr;
+        margin-left: 0;
+    }
+    #image{
+        width: 90vw;
+        height: 400px;
+    }
+    .box{
+        width: 90vw;
+        margin: 0;
+        margin-left: 5vw;
+        margin-bottom: 150px;
+        height: 600px;
+    }
+}
+.buttondetail{
+    position: absolute;
+    right: 10px;
+}
+.box h3{
+    color: white;
+    margin-left:10px ;
+}
+
+.footer{
+    color: lightgrey;
+}
